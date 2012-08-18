@@ -1,0 +1,4 @@
+table[width="30%"],
+table[id^="30"],table[id^="40"] {display:none !important;}
+table[class="result"] {width:100% !important;}
+table[width="65%"] {/*百度推广*/ display:none !important;}

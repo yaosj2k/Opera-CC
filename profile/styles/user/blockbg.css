@@ -1,0 +1,5 @@
+@charset "utf-8";
+html,body,div:not(.portrait) {
+/*color:black !important;*/
+background-image: url(about:blank) !important;
+}

@@ -1,0 +1,77 @@
+.chatBox_myMsg {
+
+
+	margin-left:60px!important;
+margin-right:5px!important;
+margin-bottom:3px!important;
+	background-color:#99ccff;
+	position:relative;
+border-radius:10px;
+}
+
+.chatBox_myMsg:after{	
+	content:"";
+	position:absolute;
+	bottom:6px; /* value = - border-top-width - border-bottom-width */
+	left:-8px; /* controls horizontal position */
+border:0;
+border-top-width:6px;
+border-right-width:10px;
+border-bottom-width:6px;
+	border-style:solid;
+	border-color: transparent #99ccff; 
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+    height:0;
+}
+
+.chatBox_myMsg:before{	
+display:block;
+left:-50px;
+bottom:0px;
+content:url(http://face9.qun.qq.com/cgi/svr/face/getface?uin=61422238);
+position:absolute;
+/*
+	content:"";
+	position:absolute;
+  border:0;
+	bottom:0px; 
+	left:-17px; 
+	border-left-width:17px; 
+border-bottom-width:10px;
+	border-style:solid;
+	border-color:#FFF transparent; 
+    display:block; 
+    width:0;*/
+}
+
+
+
+.chatBox_buddyMsg {
+width:auto;
+/*text-align:right;*/
+	margin-right:20px!important;
+margin-left:5px!important;
+margin-bottom:3px!important;
+	background:#e1f2fa;
+	position:relative;
+border-radius:10px;
+}
+
+.chatBox_buddyMsg:before{	
+	content:"";
+	position:absolute;
+  border:0;
+	top:6px; /* value = - border-top-width - border-bottom-width */
+	right:-10px; /* controls horizontal position */
+	border-left-width:10px; /* vary these values to change the angle of the vertex */
+border-bottom-width:6px;
+border-top-width:6px;
+	border-style:solid;
+	border-color:transparent #e1f2fa; 
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+    height:0;
+}

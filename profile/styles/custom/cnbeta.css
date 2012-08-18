@@ -1,0 +1,47 @@
+div#userInfo,div#c_ad,div#AdForward,div#fm_r,#votes:nth-child(6),#votes:nth-child(11),#votes:nth-child(14),#votes:nth-child(15),#votes:nth-child(16),#foot,#comad,#news>a,#feedback>center,#logo>a>img {
+	display:none !important;
+}
+
+.newslist dl dd.detail em{
+	display:none !important;
+}
+
+div#news>object[width="576"] { /*正文下方flash广告*/
+    display:none !important;    
+}
+
+#wrapper>center {/*首页最下方图片广告*/
+    display:none !important;
+}
+div#c_hot {/*修正首页热门新闻框*/
+height: auto!important;
+}
+/*
+#logo {
+    display:none !important;
+}
+#main,#head {width:100%!important;}
+#main #sideBar{
+float:left!important;
+width:30%!important;}
+#main #content{
+float:left!important;
+width:70%!important;}
+#head {top:0px!important;height:auto!important;}
+#head #h_left{float:left;position:static!important;}
+#head #h_right{float:right;position:static!important;}
+.newslist{background:none!important;}
+#wrapper{width:90%!important;}
+*/
+.newslist{position:relative;}
+img[src="http://img.cnbeta.com/topics/stevebw.png"]::after
+{content:"";
+display:block;
+position:absolute;
+top:0;
+left:0;
+background:#000;
+width:598px;
+height:206px;
+}
+

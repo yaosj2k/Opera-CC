@@ -1,0 +1,13 @@
+div.content_postad_wrapper {
+	display: none !important;
+}
+
+div.right {
+	display: none !important;
+}
+
+#sidebar-ads {
+	display: none !important;
+}
+
+

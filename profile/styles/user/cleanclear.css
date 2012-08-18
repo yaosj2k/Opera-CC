@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* Name: Clean && Clear */
+
+/*
+ahmore@gmail.com
+ 19:14 2007-9-9
+*/
+
+/*
+img, object[type^="image"] {
+ display: none !important;
+}*/
+
+a img, a object[type^="image"], a [usemap], a[ismap] {
+ display: inline-block !important;
+}
+
+a {
+ /*color: #003399 !important;*/
+ text-decoration: none !important;
+}
+
+body, table, th, tr, td, div, dt, p, ul, li, span, layer, form, h1, h2, h3, h4, h5,input,* {
+ /*color:black !important;*/
+ background-image: url(about:blank) !important;
+}
+
+/*----------页面背景颜色调整------------------
+body,div,textarea,input{background-color: #e5ede0;}*/
+
+/*将白色字体变为暗蓝灰*/
+[style*="color: white"],
+[style*="color: #FFFFFF"],
+[color*="White"],
+[color*="#FFFFFF"]
+{color: #483D8B !important;}
+
+/*过滤网页上的隐藏文字*/
+SPAN[class="transparent"],
+[style*="font-size:0p"],
+[style*="font-size: 0p"]{display: none !important;}
+
+/*阻止<blink>标签带来的闪烁*/
+blink, .blink, *[style*="blink"]{text-decoration : inherit !important;}

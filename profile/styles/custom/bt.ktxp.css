@@ -1,0 +1,12 @@
+/*广告*/.main>center,
+div#general>div:nth-child(3),
+div#gamediad_popWin,
+.box2>iframe#ad_right,
+.main>#ShowQQ
+{display:none!important;}
+#tips{display:none!important;}
+a[href="http://apk.azbus.net"]{display:none!important;}
+/*列表等高*//*.main .list_style .alt1{height:53px!important;}*/
+.main .list_style .alt2{height:53px!important;}
+/*下载区修正*/.show .box1{width:100%!important;}
+#general .description,.downloadbox .right {width:auto!important;}

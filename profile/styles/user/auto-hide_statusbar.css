@@ -1,0 +1,40 @@
+/* 
+http://www.foursquared.eu
+!important declarations are added to override the corresponding declaration in the author's style sheet
+*/
+
+/* Do not modify */
+a[href]:hover:after {
+content: attr(href) !important; /* Add url */
+overflow: hidden !important; /* Hide overflow */
+white-space: nowrap !important; /* No wrap with long urls */
+text-overflow: ellipsis !important; /* Ellipsis overflow */
+z-index: 2147483647 !important; /* Maximum value on 32-bit plaforms */
+position: fixed !important; /* Position of statusbar is fixed */
+/* Do not modify */
+
+/* Reset all the text styles */
+text-transform: lowercase !important;
+font-style: normal !important;
+line-height: 1em !important;
+font-weight: normal !important;
+font-variant: normal !important;
+text-decoration: none !important;
+letter-spacing: normal !important;
+text-align: left !important;
+border: none !important;
+/* Reset all the text styles */
+
+/* Customize */
+max-width: 90% !important; /* Statusbar max width */
+font-family: "Trebuchet MS", Arial, sans-serif !important; /* Statusbar font */
+font-size: 12px !important; /* Statusbar font size */
+background-color: #fff !important; /* Statusbar background color */
+color: #000 !important; /* Statusbar text color */
+opacity: 0.7 !important; /* Statusbar opacity */
+padding: 2px !important; /* Statusbar padding */
+left: 0px !important; /* Statusbar from left */
+bottom: 0px !important; /* Statusbar from bottom */
+word-spacing: normal; 
+/* Customize */
+}

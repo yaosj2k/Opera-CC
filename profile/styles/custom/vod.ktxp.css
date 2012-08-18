@@ -1,0 +1,12 @@
+tbody tr td iframe {
+	display: none !important;
+}
+
+html body center {
+	display: none !important;
+}
+
+div.row .table iframe {
+	display: none !important;
+}
+.header {height:auto !important;}

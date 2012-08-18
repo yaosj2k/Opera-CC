@@ -1,0 +1,19 @@
+
+#ecomContainer{
+display:none!important;
+}
+#imgContainer{
+    margin-right: 0!important;
+    width:90%!important;}
+#detailImg{width:100%!important;
+    margin-right: 10%!important;}
+#picWrap{width:100%!important;
+    height:782px!important;}
+#album{left:auto!important;
+    margin:0 auto;
+    right:5px;
+    width:10%;}
+#picWrap img {
+    height:auto!important;
+    width:100%!important;
+}

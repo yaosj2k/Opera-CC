@@ -1,0 +1,4 @@
+.contentArticle:hover>.linkImg {
+    margin-top:-89px;
+    -o-transition: margin-top 250ms;
+}

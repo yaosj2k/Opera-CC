@@ -1,0 +1,13 @@
+
+#top_ad,#sidebar-sponsor,/*广告*/
+.banner_toped2k,/*相关资源上面的广告*/
+iframe.Banner3,iframe.Banner2,/*广告*/
+#page-body>#side-bar,
+#page-body>iframe[style],/*首页顶部广告*/
+.leftDiv>.box_7:nth-child(2),.leftDiv>div[style],/*电影剧集中间广告*/
+.topic-list>li[style],/*音乐图书搜索结果插入广告*/
+.rightDiv>div:not(.box_7), /*资源右边广告*/
+#someLinks>[style],.imgForGame /*相关链接游戏广告*/
+{display:none!important;}
+
+/*搜索结果修正*/ #results-wrapper{float:none!important;margin:0 auto!important;}

@@ -1,0 +1,128 @@
+/*
+ *Name:google
+ *Date:2012-4-18
+ */
+ 
+/*adblock*/
+#tads,#rhs_block,#bottomads,#tadsb {display: none !important;}
+ 
+ 
+/*fixed width*/
+#cnt,#rcnt,#cnt>.mw{
+    margin: 0!important;
+    max-width: 100%!important;
+}
+#res,#ires,#rg,#mn,#center_col,#foot{
+    display: block !important;
+    border:none!important;
+    padding: 0!important;
+    margin:0!important;
+    border:0!important;
+    width: 100% !important;
+    max-width: 100%!important;
+    min-width: 100%!important;
+}
+ 
+.s{max-width: 96%!important;}
+#rcnt {position:static!important;}
+ 
+/*leftnav hover effect*/
+#leftnav{margin-left:-204px!important;}
+#leftnavc::before{
+    content:"";
+    height:100%;
+    display:block!important;
+    width:1%;
+    top:25px;
+    left:0px;
+    z-index:130;
+    position:absolute;
+}
+#leftnav{
+    z-index:135;
+    background:#FFF!important;
+    height:100%;
+    opacity: 0.9;
+    /*-o-transition: margin-left 500ms;*/
+}
+#leftnavc:hover #leftnav{
+    margin-top:30px;
+    margin-left:0!important;
+    box-shadow: 0 0 20px 10px rgba(255,255,255,0.9);
+}
+ 
+/*double Columns*/
+#ires>ol {
+    margin-left:1%!important;
+    position:relative!important;
+    width:99%!important;
+}
+#ires>ol>ol,#ires>ol>li.g {
+    /* border-radius: 5px !important; */
+    background-color: #EBEFF9!important;
+    border: 0!important;
+    padding:1%!important;
+    margin-top: 1%!important;
+    margin-left: 0!important;
+    margin-right: 1%!important;
+    margin-bottom: 0!important;
+    /* ---------->此处设置结果边框 #000 颜色 */
+    box-shadow: 0 0 1px 1px #000;
+    height:120px!important;
+    width:47%!important;
+    overflow: hidden;
+    min-height:120px!important;
+    position:relative!important;
+}
+#ires>ol>:nth-child(2n+1){float:left;}
+#ires>ol>:nth-child(2n){float:right;}
+
+#topstuff>div {
+    background-color: #EBEFF9!important;
+    border: 0!important;
+    padding:1%!important;
+    margin-top: 1%!important;
+    margin-left: 1%!important;
+    margin-right: 1%!important;
+    box-shadow: 0 0 1px 1px #000;
+}
+
+/*search result auto height 下面这部分打开自动搜索结果高度 */
+#ires>ol>ol:hover,#ires>ol>li.g:hover{
+    z-index:1;
+    overflow-y:auto;
+}
+#ires>ol>:hover *{background-color: #D8E8F8!important;}
+ 
+/*search others*/
+.brs_col>p{
+    padding:1px 10px!important;
+    float:left;
+    border: 1px solid #B2B2B2;
+    background-color: #FAF1E8;
+}
+/*foot*/
+#foot{clear:both!important;}
+/*hover effect*/
+#ires>ol>ol:hover,#ires>ol>li.g:hover ,#topstuff:hover>div {
+    box-shadow: 1px 1px 1px #0099FF, 1px -1px 1px #0099FF, -1px 1px 1px #0099FF, -1px -1px 1px #0099FF, 0px 0px 5px 1px #0099FF;
+    background-color: #D8E8F8!important;
+}
+.brs_col>p:hover {background-color:#fae8fa!important;}
+ 
+/*fixed pager*/
+#botstuff {clear:both;}
+#navcnt {clear:both;}
+/*fixed advanced search*/
+.ksfcccl {position: absolute!important;right:0!important;
+    top: 83px!important;z-index:100!important;}
+/*fixed results count*/
+#subform_ctrl {top: 83px!important;position: absolute!important;}
+/*hide past 15 years*/
+#tbbc {display: none !important;}
+.f{color:#b416ff!important;}
+#ires>ol b{color:#c00;}
+/* fix #ires>ol>li:not(.g) {display:none!important;}*/
+#ires>ol>li.head {display:none!important;}
+
+a.logo {display:none!important;}

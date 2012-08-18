@@ -1,0 +1,69 @@
+#tads,#leftnav,#rhs {/*广告*/
+	display: none !important;
+}
+
+#cnt {
+	padding-top:0!important;
+	margin: 0!important;
+	max-width: 100%!important;
+}
+
+#center_col,#res,#ires,.s{/*修正大外边框div宽度*/
+	border:none!important;
+	margin: 0!important;
+	padding: 0!important;
+	border:0!important;
+	width: 100% !important;
+}
+#res .s{/*结果框内容100%宽度*/
+	max-width: 100% !important;
+}
+
+/*
+#res>.ssp { 隐藏您要找得是不是%s 
+	display: none !important;
+}
+
+.std.stp{float:right;
+	width:40%!important;}
+#trev{float:left!important;width:50%!important;}
+*/
+
+
+div#slist{/*增强搜索引擎*/
+	clear: none!important;
+	float: right;
+	margin-right:30px!important;
+	border-bottom: 0!important;
+}
+/*
+隐藏翻译此页
+span.std.nobr{
+	display: none !important;
+}
+*/
+#topstuff>div{/*小提示修正*/
+	margin:2px!important;
+}
+
+div#ires>ol>li.g.videobox,div#ires>ol>li.g,div#ires>ol>li#newsbox {/*搜索结果矩形*/
+	border-top: 1px solid #C2CFF1;
+	margin: 0!important;
+	background-color: #EBEFF9;
+	padding: 8px!important;
+}
+
+#brs p{/*%s的相关搜索*/
+	padding:1px 10px!important;
+	float:left!important;
+	border: 1px solid #B2B2B2;
+	background-color: #FAF1E8;
+}
+
+div#ires>ol>li.g.videobox:hover,div#ires>ol>li.g:hover,div#ires>ol>li#newsbox:hover{/*hover*/
+	background-color: #D8E8F8;}
+#brs p:hover{background-color:#fae8fa;}
+
+/*用户框下移*/
+#guser {right:0!important;position: absolute;}
+.gbh, .gbd{border:none!important;}

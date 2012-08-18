@@ -1,0 +1,16 @@
+.postprofile dd ,.postprofile dt *:nth-child(n+2)
+{
+display:none !important;
+}
+.postbody .content{
+min-height:0px !important;
+}
+.postprofile
+{
+margin:0px !important;
+}
+.postbody,.postprofile dt
+{
+margin-bottom:0px !important;
+margin-top:0px !important;
+}

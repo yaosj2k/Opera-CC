@@ -1,0 +1,446 @@
+﻿/**
+	Noob
+*/
+
+::selection {
+	background: transparent;
+}
+
+::-moz-selection {
+	background: transparent;
+}
+
+body {
+/*	background: url('bg1.jpg') no-repeat;
+	background-size: 100%;*/
+	background: url('bg.png');
+	margin: 0;
+	padding: 0; 
+	overflow: hidden;
+	font-family: 'arial';
+}
+iframe {
+ }
+
+a {
+	text-decoration: none;
+}
+
+li {	
+	list-style-type: none;
+}
+
+/**
+	顶部
+*/
+#header {
+	background: linear-gradient(top,rgba(0,0,0,0.6),rgba(0,0,0,0.1));
+	background: -o-linear-gradient(top,rgba(0,0,0,0.6),rgba(0,0,0,0.1));
+	background: -moz-linear-gradient(top,rgba(0,0,0,0.6),rgba(0,0,0,0.1));
+	background: -webkit-linear-gradient(top,rgba(0,0,0,0.6),rgba(0,0,0,0.1));
+	box-shadow: 0px 1px 12px rgba(0,0,0,0.6), inset 0px -1px 0px rgba(0,0,0,0.6);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 26px;
+	width: 100%;
+	z-index: 99999;
+}
+/**
+	菜单
+*/
+#header ul#mainmenu {
+	background: transparent;
+	margin: 1px auto 1px 20px;
+	z-index: 999;
+}
+#header ul#mainmenu > li {
+	width: auto;
+	margin: auto 8px;
+	line-height: 24px;
+	height: 26px;
+	font-weight: bold;
+	color: rgb(237,237,237);
+	font-size: 11px;
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	text-transform: uppercase;
+	transition: color 0.3s ease-in-out;
+	-o-transition: color 0.3s ease-in-out;
+	-moz-transition: color 0.3s ease-in-out;
+	-webkit-transition: color 0.3s ease-in-out;
+}
+#header ul#mainmenu > li:first-letter {
+	font-size: 13px;
+}
+#header ul#mainmenu > li:hover,
+#header ul#mainmenu > li:focus,
+#header ul#mainmenu > li:active {
+	color: rgb(125,125,255);
+}
+
+#header ul#mainmenu > li > ul {
+	width: auto;
+	min-width: 80px;
+	height: auto;
+	padding: 10px;
+	position: absolute;
+	background: transparent;
+	margin-left: -9000px;
+	margin-top: 0px;
+	box-shadow: -1px 0px 0px rgba(255,255,255,0.1), inset 1px 0px 0px rgba(0,0,0,0.6);
+	text-shadow: 0px 1px 2px rgb(0,0,0);
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	-webkit-transition: opacity 0.3s ease-in-out;
+}
+#header ul#mainmenu > li:hover > ul,
+#header ul#mainmenu > li:focus > ul,
+#header ul#mainmenu > li:active > ul {
+	margin-left: -12px;
+	opacity: 1;
+}
+#header ul#mainmenu > li > ul > li {
+	margin: auto;
+	font-size: 12px;
+	text-align: left;
+	color: rgb(227,227,227);
+	text-transform: capitalize;
+}
+#header ul#mainmenu > li > ul > li a {
+	color: rgb(227,227,227);
+	transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	margin-left: 0px;
+}
+#header ul#mainmenu > li > ul > li a:hover {
+	margin-left: 6px;
+	color: rgb(125,125,255);
+}
+/**
+	搜索
+*/
+#header #search {
+	position: absolute;
+	right: 20px;
+	height: 26px;
+	width: 40px;
+	background: url('sb.png') 9px 1px no-repeat;
+	top: 0px;
+}
+#header #search:hover {
+	background: url('sb.png') 9px 1px no-repeat, -o-linear-gradient(top,rgb(175,175,255),rgb(125,125,205));
+	background: url('sb.png') 9px 1px no-repeat, -moz-linear-gradient(top,rgb(175,175,255),rgb(125,125,205));
+	background: url('sb.png') 9px 1px no-repeat, -webkit-linear-gradient(top,rgb(175,175,255),rgb(125,125,205));
+	background: url('sb.png') 9px 1px no-repeat, linear-gradient(top,rgb(175,175,255),rgb(125,125,205));
+	box-shadow: 0px 1px 12px rgba(0,0,0,0.6), inset 0px -1px 0px rgba(0,0,0,0.9);
+}
+#header #search .searchbar {
+	width: 250px;
+	background: linear-gradient(top,rgb(175,175,255),rgb(125,125,205));
+	background: -o-linear-gradient(top,rgb(175,175,255),rgb(125,125,205));
+	background: -moz-linear-gradient(top,rgb(175,175,255),rgb(125,125,205));
+	background: -webkit-linear-gradient(top,rgb(175,175,255),rgb(125,125,205));
+	position: absolute;
+	top: 26px;
+	right: 0px;
+	z-index: 999;
+	margin-right: -9000px;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	-webkit-transition: opacity 0.3s ease-in-out;
+	padding: 4px 0px 4px 80px;
+	box-shadow: 0px 1px 12px rgba(0,0,0,0.6);
+}
+#header #search:hover .searchbar {
+	margin-right: 0px;
+	opacity: 1;
+}
+#header #search .searchbar input#s {
+	height: 18px;
+	line-height: 18px;
+	margin: 0px;
+	background: rgb(255,255,255);
+	border-radius: 18px;
+	border: none;
+	width: 160px;
+	padding: 2px 8px 2px 8px;
+	margin: 0;
+	font-family: 'arial';
+	box-shadow: inset 0px 2px 2px rgba(0,0,0,0.5), inset 0px -1px 4px rgba(0,0,0,0.3);
+	color: rgb(153,153,153);
+}
+#header #search .searchbar input#s:hover,
+#header #search .searchbar input#s:focus {
+	color: rgb(0,0,0);
+}
+#header #search .searchbar input#searchsubmit {
+	background: none;
+	border: none;
+	margin: 0;
+	color: rgb(255,255,255);
+	font-weight: bold;
+	font-family: 'arial';
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.6)
+}
+
+/**
+	Main
+*/
+#main {
+	margin: 0;
+}
+/**
+	Finder
+*/
+#main #finder {
+	width: 70%;
+	margin: 7% auto;
+	background: rgb(247,247,247);
+	box-shadow: 0px 10px 30px rgba(0,0,0,0.716);
+	border: 1px solid rgb(32,32,32);
+	position: relative;
+}
+#main #finder .headbar {
+	width: 100%;
+	background: linear-gradient(top,rgb(37,37,37),rgb(21,21,21));
+	background: -o-linear-gradient(top,rgb(37,37,37),rgb(21,21,21));
+	background: -moz-linear-gradient(top,rgb(37,37,37),rgb(21,21,21));
+	background: -webkit-linear-gradient(top,rgb(37,37,37),rgb(21,21,21));
+	box-shadow: inset 0px 1px 0px rgba(255,255,255,0.056), inset 0px -1px 0px rgba(0,0,0,0.6);
+	height: 30px;
+	border-radius: 8px 8px 0 0;
+	line-height: 30px;
+	color: rgb(255,255,255);
+	text-shadow: 0px 1px 2px rgb(0,0,0);
+	text-align: center;
+	margin: -8px 0 1px -1px;
+	border: 1px solid rgb(32,32,32);
+}
+#main #finder .toolbar {
+	width: 100%;
+	background: rgb(233,233,233);
+	height: 26px;
+	border-top: 1px solid rgb(212,212,212);
+	border-bottom: 1px solid rgb(212,212,212);
+}
+#main #finder .toolbar p {
+	margin: 0 -4px 0 0;
+	padding: 0 10px 0 10px;
+	line-height: 26px;
+	display: inline-block;
+	font-size: 12px;
+	border-right: 1px solid rgb(255,255,255);
+	border-left: 1px solid rgb(212,212,212);
+	background: linear-gradient(top,rgb(223,223,223),rgb(243,243,243));
+	background: -o-linear-gradient(top,rgb(223,223,223),rgb(243,243,243));
+	background: -moz-linear-gradient(top,rgb(223,223,223),rgb(243,243,243));
+	background: -webkit-linear-gradient(top,rgb(223,223,223),rgb(243,243,243));
+}
+#main #finder .toolbar p:last-child {
+	box-shadow: 1px 0px 0px rgb(212,212,212);
+}
+#main #finder .toolbar p a {
+	color: rgb(51,51,51);
+	transition: color 0.3s ease-in-out;
+	-o-transition: color 0.3s ease-in-out;
+	-moz-transition: color 0.3s ease-in-out;
+	-webkit-transition: color 0.3s ease-in-out;
+}
+#main #finder .toolbar p a:hover {
+	color: rgb(125,125,255);
+}/*
+#main #finder .left {
+	float: left;
+	width: 178px;
+	height: 464px;
+	background: rgb(233,233,233);
+	margin-right: 1px;
+	border-right: 1px solid rgb(212,212,212);
+	box-shadow: 1px 0px 0px rgb(255,255,255);
+}*/
+#main iframe {
+	border: none;
+	height: 464px;
+	width: 100%;
+}
+	
+/**
+	右侧图标
+*/
+#main ul#icon {
+	right: 180px;
+	top: 60px;
+	width: 0px;
+	height: 0px;
+	background: rgba(0,0,0,0.6);
+	position: absolute;
+}
+#main ul#icon li	{
+	height: 32px;
+	min-width: 100px;
+	line-height: 12px;
+	padding: 6px 6px 6px 40px;
+	margin: 6px 6px 12px 0px;
+	background-repeat: no-repeat;
+	background-position:  0px 0px;
+	background-size: 32px 32px;
+	font-size: 12px;
+	color: rgb(255,255,255);
+	text-shadow: 0px 1px 2px rgb(0,0,0);
+	font-weight: bold;
+	font-family: 'segoe script';
+	position: relative;
+}
+#main ul#icon li:hover::before {
+	background: linear-gradient(top,rgba(0,0,0,0.1),rgba(0,0,0,0.6));
+	background: -o-linear-gradient(top,rgba(0,0,0,0.1),rgba(0,0,0,0.6));
+	background: -moz-linear-gradient(top,rgba(0,0,0,0.1),rgba(0,0,0,0.6));
+	background: -webkit-linear-gradient(top,rgba(0,0,0,0.1),rgba(0,0,0,0.6));
+	z-index: -1;
+	content: "";
+	width: 100%;
+	height: 100%;
+	padding: 8px 8px 0px 8px;
+	position: absolute;
+	top: -8px;
+	left: -8px;
+	border-radius: 6px;
+	box-shadow: -1px -1px 0px rgba(255,255,255,0.1), -1px 1px 0px rgba(255,255,255,0.1), 1px -1px 0px rgba(255,255,255,0.1), 1px 1px 0px rgba(255,255,255,0.1), inset 1px 1px 0px rgba(0,0,0,0.3), inset -1px -1px 0px rgba(0,0,0,0.3), inset 1px -1px 0px rgba(0,0,0,0.3), inset -1px 1px 0px rgba(0,0,0,0.3);
+	opacity: 1;
+}
+#main ul#icon li	a {
+	color: rgb(255,255,255);
+}
+#main ul#icon li	a span {
+	color: rgb(233,233,233);
+	margin: 2px 0 0 0;
+	font-size: 11px;
+	font-weight: normal;
+	display: block;
+}
+
+/**
+	底部
+*/
+#footer {
+	background: rgba(0,0,0,0.6);
+	box-shadow: 0px -1px 0px rgba(255,255,255,0.1), inset 0px 1px 0px rgba(0,0,0,0.6);
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	height: 80px;
+	width: 100%;
+}
+#footer #content {
+	margin: auto;
+	width: 760px;
+	height: 100%;
+}
+/**
+	图标
+*/
+#footer #content .icon {
+	background: transparent;
+	width: 48px;
+	height: 48px;
+	border-radius: 12px;
+	display: inline-block;
+	margin: 15px 6px;
+	box-shadow: 0px 1px 2px rgb(0,0,0);
+	line-height: 48px;
+	text-align: center;
+	color: rgba(0,0,0,0.8);
+	text-shadow: 0px 1px 0px rgba(255,255,255,0.3);
+}
+
+#footer #content .icon a {
+	background-repeat: no-repeat;
+	background-position: center;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 12px;
+	position: relative;
+}
+/**
+	访问过的网页
+*/
+#footer #content .icon a:visited::before {
+	background: rgb(255,255,255);
+	box-shadow:  0px 0px 20px rgb(255,255,255);
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	border-radius: 4px;
+	top: 62px;
+	left: 21px;
+	content: '';
+}
+/**
+	显示的名字
+*/
+#footer #content .icon a:hover::after {
+	position: absolute;
+	top: -66px;
+	left: -26px;
+	width: 100px;
+	height: 24px;
+	line-height: 24px;
+	display: inline-block;
+	content: '';
+	color: rgb(255,255,255);
+	font-family: 'segoe script';
+	text-shadow: 0px 1px 3px rgb(0,0,0);
+	text-align: center;
+}
+#footer #content .icon a.themex:hover::after { content: "ThemeX"; }
+#footer #content .icon a.yqbmh:hover::after { content: "178 漫画"; }
+#footer #content .icon a.cnbeta:hover::after { content: "CnBeta"; }
+#footer #content .icon a.deviantart:hover::after { content: "deviantArt"; }
+#footer #content .icon a.yingzheng:hover::after { content: "嬴政天下"; }
+#footer #content .icon a.wmzhe:hover::after { content: "完美者"; }
+#footer #content .icon a.yyw:hover::after { content: "115"; }
+#footer #content .icon a.bilibili:hover::after { content: "Bilibili"; }
+#footer #content .icon a.acfun:hover::after { content: "ACFun"; }
+#footer #content .icon a.hexieshe:hover::after { content: "和谐社"; }
+#footer #content .icon a.pcbeta:hover::after { content: "PCBeta"; }
+/**
+	三角
+*/
+#footer #content .icon a .triangle {
+	display: none;
+}
+#footer #content .icon a:hover .triangle {
+	position: absolute;
+	top: -39px;
+	left: 0px;
+	width: 48px;
+	height: 24px;
+	overflow: hidden;
+	border-bottom: 1px solid rgb(20,20,20);
+	box-shadow: inset 0px -1px 0px rgb(50,50,50);
+	display: block;
+}
+#footer #content .icon a:hover .triangle::before {
+	background: rgba(0,0,0,0.6);
+	box-shadow: -1px -1px 0px rgba(255,255,255,0.1), inset 1px 1px 0px rgba(0,0,0,0.6);
+	position: absolute;
+	bottom: -36px;
+	left: 0px;
+	transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	height: 48px;
+	width: 48px;
+	content: '';
+}
+	

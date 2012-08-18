@@ -1,0 +1,5 @@
+.logo_banner>.banner {display:none !important;}
+.sidead {display:none !important;}
+div[class*="_ad_"] {display:none !important;}
+.ad_single{display:none !important;}/*广告*/
+.postfirst h3 {/*修正文本高度*/height:auto !important;}

@@ -1,0 +1,76 @@
+@charset "utf-8";
+/*
+ *Name:baidu
+ *Date:2012-1-7
+ */
+ 
+ 
+/* 广告 */
+#container>table[width] {display: none !important;}
+ 
+/* 搜索结果 */
+#wrapper>br,#container>br {display: none !important;}
+#container {
+    padding:0!important;
+    margin-left:1%!important;
+    margin-right:1%!important;
+    border:0!important;
+}
+#container>table{
+    position:relative!important;
+    display:block;
+    margin:0 1% 0 0 !important;
+    width:100%!important;
+    float:left!important;
+    /*background-color: #EBEFF9;
+     此处设置结果边框属性border <1像素 虚线 颜色> 
+    border: 1px solid #000!important;*/
+border-top-right-radius:8px;
+border-top-left-radius:8px;
+}
+#container>table>tbody {
+border-top-right-radius:8px;
+border-top-left-radius:8px;
+    display:block;
+    padding:10px 10px 10px 60px!important;
+}
+#container>table>tbody>tr{display:block;}
+#container>table>tbody>tr>td{display:block;}
+#container>table>tbody>tr>td>h3,
+#container>table>tbody>tr>td>font,
+#container>table>tbody>tr>td>div,
+#container>table>tbody>tr>td>p
+{display:block;
+}
+.t {background-color:#D8E8F8;
+border-top-right-radius:8px;
+border-top-left-radius:8px;
+}
+#container .f{width:auto!important;}
+#container .f .t{margin-left:-50px!important;}
+ 
+/* 翻页 */
+#page{
+    padding:1em 0!important;
+    clear:both;
+    text-align:center;
+}
+ 
+/* 相关搜索 */
+#rs th {
+    padding: 1px 10px;
+    float: left;
+    border: 1px solid #B2B2B2;
+    background-color: #FAF1E8;
+}
+#rs td {display: none !important;}
+#rs tr {float:left;padding-right:10px;}
+ 
+/* 一些动态效果 */
+#container>table:hover{background-color: #D8E8F8;}
+#container>table:hover{z-index:101;overflow:visible;}
+#container>table:hover>tbody {
+    box-shadow: 1px 1px 1px #0099FF, 1px -1px 1px #0099FF, -1px 1px 1px #0099FF, -1px -1px 1px #0099FF, 0px 0px 5px 1px #0099FF;
+    background-color: #D8E8F8;
+}
+#rs th:hover{background-color:#fae8fa;}

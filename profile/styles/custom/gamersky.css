@@ -1,0 +1,6 @@
+div.topadbod,div.topdhbottom,div.h5,div.adc,div.t72 div.topbodr, HTML>BODY>DIV[class="center mid"]:nth-child(3)>DIV[class="bod"]>DIV[class="right_got"]:nth-child(2)>DIV[class="right_p1_bg"]:nth-child(2), HTML>BODY>DIV[class="center mid"]:nth-child(3)>DIV[class="bod"]>DIV[class="right_got"]:nth-child(2)>DIV[class="right_p1_bg"]:nth-child(20), HTML>BODY>DIV[class="center mid"]:nth-child(3)>DIV[class="bod"]>DIV[class="right_got"]:nth-child(1)>DIV[class="right_p1_ding mid"]>DIV[class="right_p1_bg"]:nth-child(2), img[src="http://image.gamersky.com/ad/950gj.jpg"] {
+	display: none !important;
+}
+.act {/*修复文章滚动条*/
+    overflow-x: visible !important;
+}

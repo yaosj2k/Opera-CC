@@ -1,0 +1,23 @@
+{
+	"content_scripts":[
+		{"css": [ "encrypted.google.css" ],"matches": [ "https://encrypted.google.com/*" ]},
+		{"css": [ "google.css" ],"matches": [ "http://74.125.71.106/*" ]},
+		{"css": [ "verycd.css" ],"matches": [ "http://www.verycd.com/*" ]},
+		{"css": [ "greendown.css" ],"matches": [ "http://*.greendown.cn/*" ]},
+		{"css": [ "web2.qq.css" ],"matches": [ "http://web2.qq.com/*" ]},
+		{"css": [ "kkkmh.css" ],"matches": [ "http://www.kkkmh.com/*" ]},
+		{"css": [ "iciba.css" ],"matches": [ "http://www.iciba.com/*" ]},
+		{"css": [ "9haow.css" ],"matches": [ "http://www.9haow.cn/*" ]},
+		{"css": [ "googlem.css" ],"matches": [ "https://www.google.com.hk/*" ]},
+		{"css": [ "baidu.css" ],"matches": [ "http://www.baidu.com/*" ]},
+		{"css": [ "reader.google.css" ],"matches": [ "https://www.google.com/reader/*" ]},
+		{"css": [ "cnbeta.css" ],"matches": [ "http://*.cnbeta.com/*" ]},
+		{"css": [ "linuxhobby.css" ],"matches": [ "http://www.linuxhobby.com/*" ]},
+		{"css": [ "bt.ktxp.css" ],"matches": [ "http://bt.ktxp.com/*" ]},
+		{"css": [ "vod.ktxp.css" ],"matches": [ "http://vod.ktxp.com/*" ]},
+		{"css": [ "gamersky.css" ],"matches": [ "http://www.gamersky.com/*" ]},
+		{"css": [ "img.baidu.css" ],"matches": [ "http://img.baidu.com/*" ]}
+	],
+	"name": "My CSS",
+	"version": "1.0.1"
+}

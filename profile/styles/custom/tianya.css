@@ -1,0 +1,52 @@
+@charset "utf-8" ;
+/* Name: 天涯社区css 宽屏 */
+
+/* 字体 */
+* {font-family: "Microsoft YaHei","微软雅黑",Tahoma,SimSun,Candara !important;}
+
+/* 一些广告 */
+.adarea,#adsp_list_top_banner,#adsp_content_top_banner,#tj_top_div {display:none !important;}
+
+/* 全局宽度 */
+#forumWrapper{width:98% !important;}
+
+/* 以下目录页css */
+/* 左侧宽度 */
+#leftNav{width:9% !important;}
+/* 右侧宽度 */
+#mainDiv{width:90% !important; left:9.5% !important;}
+/* 右侧顶栏宽度 */
+#topNavWrapper {width:100% !important;}
+#topNav {width:100% !important;}
+/* 右侧正文宽度 */
+#forumContentDiv,#forumContentDiv>#content{width:100% !important; margin:1px !important;}
+#forumContentDiv table{width:100% !important;}
+/* 天涯城市右侧正文宽度 */
+#newmaincontent>#newmainmidleft{width:100% !important; margin:1px !important;}
+/* 目录作者、时间等文字居中 */
+table td[width="90"],table td[width="35"],table td[width="88"]{text-align: center !important;}
+
+/* 天涯论坛页面的调整 */
+#pageright {width:90% !important; left:9.5% !important;}
+.box {width:100% !important;}
+.fence_left {width:70% !important;}
+.fence_rig {width:28% !important;}
+.bank ul  {width:90% !important;}
+
+/* 以下阅读页css */
+/* 正文宽度 */
+.topnav{width:85% !important;}
+.pagewrap{width:85%  !important;}
+.allpost{width:100% !important; background:#d3e8f2 !important;}
+.post{width:auto !important;font-size:20px !important; background:#d3e8f2 !important;}
+/* 作者栏调整 */
+table{width:100% !important;}
+table td{background:none !important;}
+/* 首贴关注楼主背景 */
+p#my_tomy_p {background:#d3e8f2 !important;}
+/* 图区 */
+.wrapper{width:85% !important;}
+.body{width:99% !important;}
+.pContentDiv{background:#d3e8f2 !important;}
+/* 标题上方间距调整 */
+.myplace{margin-bottom:0px !important;}

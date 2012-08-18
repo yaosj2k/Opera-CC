@@ -1,0 +1,25 @@
+div.software-detail center {
+	display: none !important;
+}
+
+.cp-main iframe {
+	display: none !important;
+}
+
+.cp-top div {
+	display: none !important;
+}
+
+ul.clearfix.software-action {
+	display: none !important;
+}
+
+div.cp.software-comment {
+	float: left !important;
+	width: 100% !important;
+}
+
+div.cp.software-download {
+	width: 49% !important;
+	float: left !important;
+}

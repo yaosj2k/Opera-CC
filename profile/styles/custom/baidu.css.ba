@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* Name:百度双列CSS */
+/* www.baidu.com */
+/* by 所罗门 20100730*/
+
+/*去广告*/
+td[align="left"],#ec_im_container,td[class="f EC_PP"],.f16.EC_PP,.r.ec_bdtg,tbody+br{
+display: none !important;
+}
+td[align="right"],table[id]+br,table.bi{
+display: none !important;
+}
+p[style]{
+display: none !important;
+}
+
+table[cellpadding="0"][id][class="result"],table[cellpadding="0"][id][mu]{
+width:48% !important;
+height:6.6em !important;
+float: left !important;
+margin: 5px 0px 5px 15px !important;
+background-color: #E1F5F0 !important;
+border: solid 1px #B8BDCF !important;
+border-radius: 8px !important;
+}
+
+[id*=Ecom],[id*=ecom],
+table[width="30%"],
+table[width="65%"],
+.f.EC_PP,
+table:not([id]) + br,
+.bi + table + style + table {
+display:none !important;
+}
+#page {text-align:center  !important;}

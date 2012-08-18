@@ -1,0 +1,201 @@
+﻿/*
+    OperaChina 论坛主题
+											
+*/
+
+/* ---------------------------------------------------------
+	实验品
+ */
+::selection { background: rgb(123,133,169) !important; color: rgb(255,255,255) !important; }
+a:hover { border-bottom-width: 0px !important; }
+ 
+Body { background: rgb(123,133,169) !important; position: relative !important; overflow-x: hidden !important; width: 100% !important; }
+#page { background: rgb(250,250,250) !important; width: 80% !important; min-width: 940px !important; margin-top: 70px !important; margin-bottom: 20px !important; padding-top: 109px !important; box-shadow: 0px 6px 26px rgba(0,0,0,0.3) !important; border-radius: 4px 4px 0px 0px !important; }
+
+/* 加个帽子 */
+#page:before { content: ""; width: 100%; position: absolute; height: 80px; top: 0px; left: 0px; background: -o-linear-gradient(top,rgb(226,226,226),rgb(201,201,201)); border-radius: 4px 4px 0px 0px; border-top: 1px solid rgb(239,239,239); border-bottom: 1px solid rgb(123,123,123); }
+#page:after { content: ""; width: 56px; height: 16px; position: absolute; left: 10px; top: 5px; background: url('http://bbs.operachina.com/download/file.php?id=60949') 0px 0px no-repeat !important; }
+
+/* 去除顶部背景 */
+#splashes #bg-forum { background: none !important; height: 0 !important; }
+/* 加个顶部状态栏 */
+#splashes { position: absolute !important; top: -70px !important; left: 0px !important; height: 24px !important; width: 100% !important; background: -o-linear-gradient(top,rgb(240,240,240),rgb(182,182,182)) !important; border-bottom: 1px solid rgb(204,204,204) !important; border-top: 1px solid rgb(249,249,249) !important; box-shadow: 0px 0px 12px rgba(0,0,0,0.8) !important; z-index: 99 !important; }
+#splashes:before { border-radius: 360px; content: ""; width: 18px; height: 18px; position: absolute; left: 11px; top: 3px; background: -o-linear-gradient(top,rgb(123,133,169),rgb(23,33,69)); }
+#splashes:after { border-radius: 360px; content: ""; width: 12px; height: 12px; position: absolute; left: 14px; top: 6px; background: -o-linear-gradient(top,rgb(222,222,222),rgb(200,200,200)); }
+
+/* Block */
+.block { box-shadow: none !important; border: none !important; margin: 0px !important; padding: 0px !important; border-radius: 0px !important; }
+.bar { border-radius: 0px !important; text-shadow: 0px 1px 1px rgb(76,76,76) !important; }
+.block .bar .title { width: 50% !important; }
+.block .bar .stats { margin-left: -46px !important; }
+.bar.bluebg { background: -o-linear-gradient(top,rgb(109,168,220),rgb(132,187,234) 2px,rgb(96,154,211)) !important; }
+.bar.redbg { background: -o-linear-gradient(top,rgb(220,109,109),rgb(234,132,132) 2px,rgb(211,96,96)) !important; }
+.bar.greenbg { background: -o-linear-gradient(top,rgb(109,200,168),rgb(132,214,187) 2px,rgb(96,191,154)) !important; }
+.block table { background: rgb(255,255,255) !important; }
+.block table tr.row { border: none !important; height: 40px !important; position: relative !important; }
+.block table tr.row:nth-child(2n) { background: rgba(123,133,169,0.07) !important; }
+.block table tr.row:hover { background: transparent !important; }
+.block table tr.row:nth-child(2n):hover { background: rgba(123,133,169,0.07) !important; }/*
+.block table tr.row td:first-child { background: transparent !important; }
+.block table tr.row td:first-child:before { -o-transform: rotate(0deg); position: absolute; left: 4px; top: 12px; content: ""; width: 4px; height: 16px; border-radius: 6px/18px; background: rgb(123,133,169); }
+.block table tr.row td:first-child:after { -o-transform: rotate(12deg); position: absolute; left: 8px; top: 12px; content: ""; width: 4px; height: 16px; border-radius: 6px/18px; background: rgb(123,133,169); }
+.block table tr.row td:nth-child(2):before { -o-transform: rotate(24deg); position: absolute; left: 12px; top: 12px; content: ""; width: 4px; height: 16px; border-radius: 6px/18px; background: rgb(123,133,169); }
+.block table tr.row td:nth-child(2):after { -o-transform: rotate(36deg); position: absolute; left: 16px; top: 12px; content: ""; width: 4px; height: 16px; border-radius: 6px/18px; background: rgb(123,133,169); }
+.block table tr.row td:nth-child(3):before { -o-transform: rotate(48deg); position: absolute; left: 20px; top: 12px; content: ""; width: 4px; height: 16px; border-radius: 6px/18px; background: rgb(123,133,169); }
+.block table tr.row td:nth-child(3):after { -o-transform: rotate(60deg); position: absolute; left: 24px; top: 12px; content: ""; width: 4px; height: 16px; border-radius: 6px/18px; background: rgb(123,133,169); }
+.block table tr.row td:nth-child(4):before { -o-transform: rotate(72deg); position: absolute; left: 28px; top: 12px; content: ""; width: 4px; height: 16px; border-radius: 6px/18px; background: rgb(123,133,169); }
+.block table tr.row td:nth-child(4):after { -o-transform: rotate(84deg); position: absolute; left: 32px; top: 12px; content: ""; width: 4px; height: 16px; border-radius: 6px/18px; background: rgb(123,133,169); }*/
+
+/* 顶部菜单 */
+#nav #mainmenu { border-radius: 0px 0px 3px 3px !important; width: 100% !important; z-index: 80 !important; margin: 0px !important; padding: 0px !important; height: 14px !important; min-height: 14px !important; background: -o-linear-gradient(top,rgba(0,0,0,0.62),rgba(0,0,0,0.37)) !important; position: absolute !important; top: -45px !important; box-shadow: 0px 1px 0px rgb(26,37,50), 0px 0px 12px rgba(0,0,0,0.80) !important; border: 1px solid rgb(26,37,50) !important; border-bottom: 1px solid rgb(108,119,132) !important; }
+#nav #mainmenu > li { margin-top: 0px !important; height: 14px !important; border-left: 1px solid rgba(108,119,132,0.8) !important; border-right: 1px solid rgba(26,37,50,0.8) !important; }
+#nav #mainmenu > li.on, 
+#nav #mainmenu > li:focus, 
+#nav #mainmenu > li:hover { background: transparent !important; }
+#nav #mainmenu > li:nth-child(1) { border-left: 1px solid rgba(108,119,132,0.2) !important; }
+#nav #mainmenu > li > a { max-height: 14px !important; color: rgb(222,222,222) !important; }
+#nav #mainmenu > li > a span { background: transparent !important; }
+#nav #mainmenu > li.support { display: none !important; }
+#nav #mainmenu > li > ul { background: -o-linear-gradient(top,rgba(0,0,0,0.37),rgba(0,0,0,0.62)) !important; box-shadow: 0px 1px 3px rgb(0,0,0) !important; border-radius: 0px 0px 3px 3px !important; top: 15px !important; border: 1px solid rgb(26,37,50) !important; border-top: 0px !important; }
+#nav #mainmenu > li > ul > li { border: none !important; }
+#nav #mainmenu > li > ul > li a:hover { background: -o-linear-gradient(top,rgb(123,133,169),rgba(123,133,169,0.67)) !important; }
+#nav #brand { display: none !important; }
+/* 一个装饰物 */
+#nav #mainmenu:before { position: absolute !important; top: 49px !important; display: inline-block !important; right: 9px !important; width: 20px !important; height: 10px !important; background: url('http://bbs.operachina.com/download/file.php?id=60949') 0px -48px no-repeat !important; content: "" !important; border-radius: 8px !important; box-shadow: inset 0px 0px 2px rgb(0,0,0) !important; }
+
+/* Header */
+#header { height: 0px !important; }
+/* Headrbar */
+#header .headerbar { height: 0px !important; }
+#header .headerbar #search-box { width: 134px !important; border-radius: 20px !important; height: 20px !important; line-height: 20px !important; background: -o-linear-gradient(top,rgb(233,233,233),rgba(233,233,233,0.67)) !important; margin: 0px !important; position: absolute !important; top: 35px !important; right: 16px !important; z-index: 100 !important; }
+#header .headerbar #search-box br { display: none !important; }
+#header .headerbar #search-box #search input#keywords { width: 100px !important; padding: 0px 6px 0px 6px !important; position: absolute !important; left: 2px !important; top: 2px !important; border-radius: 16px !important; height: 16px !important; line-height: 16px !important; background: rgba(255,255,255,0.96) !important; border: none !important; }
+#header .headerbar #search-box #search input#keywords:hover,
+#header .headerbar #search-box #search input#keywords:focus { box-shadow: none !important; }
+#header .headerbar #search-box #search input.button2 { position: absolute !important; right: 3px !important; top: 2px !important; content: "" !important; display: inline-block !important; background: -o-skin('search') !important; width: -o-skin !important; height: -o-skin !important; border: none !important; }
+#header .headerbar #search-box a[href="./search.php"] { position: absolute !important; left: 0px !important; top: 24px !important; display: inline-block !important; width: 100% !important; text-align: center !important; }
+#header .headerbar #forumtitle { content: "" !important; background: url('http://bbs.operachina.com/download/file.php?id=59303') no-repeat !important; width: 100px !important; height: 36px !important; background-size: 100px 36px !important; position: absolute !important; display: block !important; top: 33px !important; left: 10px !important; border-right: 1px dashed rgb(173,173,173) !important; padding-right: 14px !important;  }
+#header .headerbar #forumtitle:before { content: ""; position: absolute; height: 100%; width: 0px; right: -2px; top: 0px; border-right: 1px dashed rgb(230,230,230) !important; }
+/* Navbar */
+.navbar { height: 0px !important; width: 0px !important; margin: 0px !important; }
+.navbar .linklist:first-child .ucp { padding: 0px !important; color: transparent !important; position: absolute !important; top: -49px !important; height: 14px !important; right: 0px !important; z-index: 81 !important; }
+.navbar .linklist:first-child .ucp a { color: rgb(222,222,222) !important;}
+.navbar .linklist:first-child .ucp a:last-child { border-left: 1px solid rgba(108,119,132,0.8) !important; padding: 0px 15px 0px 7px !important; }
+.navbar .linklist:first-child .ucp a:first-child{ border-right: 1px solid rgba(26,37,50,0.8) !important; margin-right: -9px !important;  padding: 0px 7px 0px 15px !important; }
+.navbar .linklist:first-child .icon-home { color: transparent !important; display: block !important; width: auto !important; padding: 0px !important; position: absolute !important; top: -70px !important; height: 26px !important; left: 0px !important; z-index: 100 !important; }
+.navbar .linklist:first-child .icon-home a { line-height: 26px !important; display: inline-block !important; width: 100px !important; overflow: hidden !important; text-overflow: ellipsis; white-space: nowrap; padding: 0px 15px 0px 15px !important; }
+.navbar .linklist:first-child .icon-home a:hover,
+.navbar .linklist:first-child .icon-home a:last-child { border: none !important; background: -o-linear-gradient(top,rgb(123,133,169),rgba(123,133,169,0.67)) !important; color: rgb(255,255,255) !important; }
+.navbar .linklist:first-child .icon-home a:nth-last-child(2) + strong { position: absolute !important; top: 0px !important; left: 130px !important; display: inline-block !important; width: 100px !important; line-height: 26px !important; padding: 0px 15px 0px 15px !important; content: '搜索结果' !important; background: -o-linear-gradient(top,rgb(123,133,169),rgba(123,133,169,0.67)) !important; color: rgb(255,255,255) !important; font-weight: normal !important; }
+.navbar .linklist:first-child .icon-home a:nth-child(n+2) { margin-left: -9px !important; }
+.navbar .linklist.navlink li:first-child { color: transparent !important; position: absolute !important; top: 28px !important; left: 220px !important; }
+.navbar .linklist.navlink li:first-child a { position: relative !important; content: "" !important; display: inline-block !important; width: 32px !important; height: 32px !important; margin-right: 20px !important;}
+.navbar .linklist.navlink li:first-child a[href="./search.php"] { display: none !important; }
+.navbar .linklist.navlink li:first-child a[href="./search.php?search_id=egosearch"] { background: url('http://bbs.operachina.com/download/file.php?id=60948') -320px 0px no-repeat !important; }
+.navbar .linklist.navlink li:first-child a[href="./search.php?search_id=egosearch"]:before { content: '我的帖子'; position: absolute; left: -8px; top: 28px; width: 56px; text-shadow: 0px 1px 0px rgb(223,223,223) !important; }
+.navbar .linklist.navlink li:first-child a[href="./search.php?search_id=unanswered"] { background: url('http://bbs.operachina.com/download/file.php?id=60948') -32px 0px no-repeat !important; }
+.navbar .linklist.navlink li:first-child a[href="./search.php?search_id=unanswered"]:before { content: '消灭零回'; position: absolute; left: -8px; top: 28px; width: 56px; text-shadow: 0px 1px 0px rgb(223,223,223) !important; }
+.navbar .linklist.navlink li:first-child a[href="./search.php?search_id=newposts"] { background: url('http://bbs.operachina.com/download/file.php?id=60948') -128px 0px no-repeat !important; }
+.navbar .linklist.navlink li:first-child a[href="./search.php?search_id=newposts"]:before { content: '查看新帖'; position: absolute; left: -8px; top: 28px; width: 56px; text-shadow: 0px 1px 0px rgb(223,223,223) !important; }
+.navbar .linklist.navlink li:first-child a[href^="http://bbs.operachina.com/"] { content: normal !important; position: absolute !important; top: -72px !important; z-index: 99 !important; width: auto !important; left: 301px !important; border-left: 1px solid rgba(108,119,132,0.8) !important; height: 14px !important; line-height: 14px !important; padding: 0px 0px 0px 15px !important;}
+.navbar .linklist.navlink li:first-child a[href^="http://bbs.operachina.com/"] span { min-width: 180px !important; max-width: 500px !important; display: block !important; }
+.navbar .linklist.navlink li:first-child a:hover { border: none !important; }
+.navbar .linklist.navlink li:first-child a[href^="http://bbs.operachina.com/"]:hover { border-left: 1px solid rgba(108,119,132,0.8) !important; }
+.navbar .linklist.navlink li.ucp.rightside { position: absolute !important; color: transparent !important; }
+.navbar .linklist.navlink li.ucp.rightside a[href="./ucp.php"] { position: absolute !important; top: -84px !important; display: inline-block !important; left: 142px !important; width: 32px !important; height: 32px !important; background: url('http://bbs.operachina.com/download/file.php?id=60948') 0px 0px no-repeat !important; content: "" !important; }
+.navbar .linklist.navlink li.ucp.rightside a[href="./ucp.php"]:before { content: '控制面板'; position: absolute; left: -16px; top: 28px; width: 56px; text-shadow: 0px 1px 0px rgb(223,223,223) !important; }
+.navbar .linklist.navlink li.ucp.rightside a[href^="./mcp.php"] { position: absolute !important; top: -84px !important; display: inline-block !important; left: 408px !important; width: 32px !important; height: 32px !important; background: url('http://bbs.operachina.com/download/file.php?id=60948') -288px 0px no-repeat !important; content: "" !important; }
+.navbar .linklist.navlink li.ucp.rightside a[href^="./mcp.php"]:before { content: '版主面板'; position: absolute; left: -16px; top: 28px; width: 56px; text-shadow: 0px 1px 0px rgb(223,223,223) !important; }
+.navbar .linklist.navlink li.ucp.rightside a[href^="./adm/index.php"] { z-index: 999 !important; position: absolute !important; top: -105px !important; display: inline-block !important; left: 56px !important; width: 20px !important; height: 10px !important; background: url('http://bbs.operachina.com/download/file.php?id=60949') -20px -48px no-repeat !important; content: "" !important; border-radius: 8px !important; box-shadow: inset 0px 0px 2px rgb(0,0,0) !important; }
+.navbar .linklist.navlink li.ucp.rightside a:hover { border: none !important; }
+.ucptab { background: rgb(243,243,243) !important; border-radius: 0px !important; margin: 0px 0px 20px 0px !important; box-shadow: 0px -27px 0px rgb(243,243,243), 0px 20px 0px rgb(243,243,243) !important; }
+
+/* Topic-acition */
+.topic-actions .search-box { width: 134px !important; border-radius: 20px !important; height: 20px !important; line-height: 20px !important; background: -o-linear-gradient(top,rgb(123,133,169),rgba(123,133,169,0.67)) !important; margin: 0px !important; position: absolute !important; top: -67px !important; right: -10% !important; z-index: 100 !important; }
+.topic-actions .search-box input.inputbox.search.tiny { width: 100px !important; padding: 0px 6px 0px 6px !important; position: absolute !important; left: 2px !important; top: 2px !important; border-radius: 16px !important; height: 16px !important; line-height: 16px !important; background: rgba(255,255,255,0.96) !important; border: none !important; }
+.topic-actions .search-box input.inputbox.search.tiny:hover,
+.topic-actions .search-box input.inputbox.search.tiny:focus { box-shadow: none !important; }
+.topic-actions .search-box input.button2 { position: absolute !important; right: 3px !important; top: 2px !important; content: "" !important; display: inline-block !important; background: -o-skin('search') !important; width: -o-skin !important; height: -o-skin !important; border: none !important; }
+
+#body > .topic-actions:first-child .buttons,
+#body > .topic-actions:first-child .share.leftside { margin: 10px 0px 10px 0px !important; padding: 0px !important; }
+
+#body > .topic-actions:first-child .rightside.pagination,
+form[method="post"] .topic-actions .rightside.pagination { width: 100% !important; display: block !important; padding: 0px !important; margin: 0px !important; margin-top: -27px !important; height: 20px !important; line-height: 20px !important; background: -o-linear-gradient(top,rgba(123,133,169,0.67),rgb(123,133,169)) !important; color: rgb(255,255,255) !important; border-top: 1px solid rgb(173,183,219) !important; border-bottom: 1px solid rgb(93,103,139) !important; }
+#body > .topic-actions:first-child .rightside.pagination { margin-top: -72px !important; }
+
+/* Forum block */
+.forum.block { position: relative !important; }
+.forum.block:first-child:before { position: absolute; left: 0px; top: -27px; width: 100%; display: block; height: 20px; line-height: 20px; background: -o-repeating-linear-gradient(146deg,rgba(123,133,169,0.87),rgba(123,133,169,0.87) 10px,rgb(123,133,169) 10px,rgb(123,133,169) 20px); color: rgb(255,255,255); border-top: 1px solid rgb(173,183,219); border-bottom: 1px solid rgb(93,103,139); content: "论坛风格主题【实验版】"; text-align: right; }
+.forum.block:first-child:after { position: absolute; left: 0px; top: -27px; width: 100%; display: block; height: 20px; line-height: 20px; background: -o-repeating-linear-gradient(top,rgba(255,255,255,0.36),rgba(255,255,255,0.01)); color: rgb(255,255,255); border-top: 1px solid rgb(173,183,219); border-bottom: 1px solid rgb(93,103,139); content: " "; }
+.forum.block .bar .title { width: 45% !important; }
+.forum.block .bar .topics { margin-left: -45px !important; }
+.forum.block .bar .moderator { margin-left: -7px !important; }
+
+/* Post block */
+.post.block { overflow-y: hidden !important; box-shadow: inset -180px 0px 0px rgb(243,243,243), inset -181px 0px 0px rgb(233,233,233) !important; }
+.post.block .back2top { width: 100% !important; margin: 0px !important; height: 12px; line-height: 12px; background: -o-linear-gradient(top,rgb(255,255,255),rgb(242,242,242) 5px,rgb(236,236,236) 6px,rgb(242,242,242) 7px,rgb(255,255,255)); border-top: 1px solid rgb(193,193,193); border-bottom: 1px solid rgb(193,193,193); }
+.post.block .back2top .top img { margin: 1px 10px 0px 6px !important; }
+.post.block .postbody { width: 79% !important; }
+.post.block .postprofile { width: 180px !important; margin: 0px !important; border: none !important; }
+.post.block .postprofile .avatar img { box-shadow: 0px 1px 3px rgb(220,220,220) !important; border: 1px solid rgb(220,220,220) !important; float: none !important; margin-bottom: 0px !important; padding: 1px !important; background: rgb(255,255,255) !important; }
+#campaign { color: rgb(133,133,133) !important; background: rgb(243,243,243) !important; border-radius: 0px !important; border: none !important; margin: 0px !important; }
+#campaign * { color: rgb(133,133,133) !important; }
+
+.rules { border-bottom: 1px solid rgb(234,230,220) !important; border: none !important; margin-top: -27px !important; }
+.rules .title { margin-top: -27px !important; }
+.rules ~ .topic-actions,
+form#viewtopic ~ .topic-actions,
+#campaign ~ .topic-actions,
+.post.block:nth-child(4),
+.qr .bar, 
+.announcement .bar,
+form#viewtopic .display-options.rightside { margin: 8px 0px 0px 0px !important; }
+
+/*Quick reply */
+.qr form fieldset #message-box-ns { padding: 10px 20px 10px 20px !important; background: rgb(250,250,250) !important; }
+.qr form fieldset #message-box-ns #message { box-shadow: none !important; width: 100% !important; border: 2px groove rgb(220,220,220) !important; border-radius: 0px !important; padding: 0px !important; }
+
+/* Footer */
+#footer { border-top: 1px solid rgb(236,236,236) !important; background: -o-linear-gradient(top,rgb(255,255,255),rgb(243,243,243)) !important; }
+
+/* Button */
+.post-icon,
+.reply-icon,
+.locked-icon { font-weight: bold !important; width: 80px !important; box-shadow: 0px 0px 1px rgb(0,0,0) !important;  border: 1px solid rgb(123,123,123) !important; line-height: 22px !important; text-align: center !important; height: 22px !important; border-radius: 20px !important; background: -o-linear-gradient(top,rgb(255,255,255),rgb(230,230,230) 8px,rgb(220,220,220) 10px,rgb(230,230,230) 12px,rgb(255,255,255)) !important; }
+.post-icon span,
+.reply-icon span,
+.locked-icon span { background: transparent !important; }
+.post-icon a,
+.reply-icon a,
+.locked-icon a { margin-left: -2px !important;  }
+.post-icon { margin-left: 10px !important; } 
+
+/* Level */
+img[src*="./images/ranks/"] { border: 1px solid rgb(220,220,220) !important; font-weight: bold !important; font-family: arial !important; border-radius: 30px !important; box-shadow: 0px 1px 3px rgb(220,220,220) !important; color: rgb(0,51,153) !important; content: '' !important; display: block !important; width: 120px !important; height: 22px !important; margin: 0px !important; line-height: 22px !important; font-size: 12px !important; text-align: center !important; background: -o-linear-gradient(top,rgb(255,255,255),rgb(240,240,240),rgb(255,255,255)) !important; }  
+img[src$="/Opera1.0.png"] { content: 'Opera 1.0' !important; }
+img[src$="/Opera2.0.png"] { content: 'Opera 2.0' !important; }
+img[src$="/Opera3.0.png"] { content: 'Opera 3.0' !important; }
+img[src$="/Opera4.0.png"] { content: 'Opera 4.0' !important; }
+img[src$="/Opera5.0.png"] { content: 'Opera 5.0' !important; }
+img[src$="/Opera6.0.png"] { content: 'Opera 6.0' !important; }
+img[src$="/Opera7.0.png"] { content: 'Opera 7.02' !important; }
+img[src$="/Opera7.52.png"] { content: 'Opera 7.52' !important; }
+img[src$="/Opera8.0.png"] { content: 'Opera 8.0' !important; }
+img[src$="/Opera8.54.png"] { content: 'Opera 8.54' !important; }
+img[src$="/Opera9.0.png"] { content: 'Opera 9.0' !important; }
+img[src$="/Opera9.5.png"] { content: 'Opera 9.5' !important; }
+img[src$="/Opera9.6.png"] { content: 'Opera 9.6' !important; }
+img[src$="/Opera10.00.png"] { content: 'Opera 10.0' !important; }
+img[src$="/Opera10.10.png"] { content: 'Opera 10.1' !important; }
+img[src$="/Opera10.50.png"] { content: 'Opera 10.5' !important; }
+img[src$="/Opera10.6.png"] { content: 'Opera 10.6' !important; }
+img[src$="/Opera11.0.png"] { content: 'Opera 11.0' !important; }
+img[src$="/moderator.png"] { content: '论坛版主' !important; color: rgb(204,51,51) !important; }
+img[src$="/super_moderator.png"] { content: '超级版主' !important; color: rgb(255,0,0) !important; }
+img[src$="/Employee.png"] { content: 'Staff' !important; color: rgb(255,51,204) !important; }
+img[src$="/senior.png"] { content: '资深玩家' !important; color: rgb(204,153,0) !important; }
+img[src$="/octt.png"] { content: '翻译团队' !important; color: rgb(102,204,255) !important; }
+img[src$="/admin.png"] { content: '管理员' !important; color: rgb(255,153,204) !important; }
+img[src$="/block.png"] { content: '小黑屋' !important; color: rgb(0,0,0) !important; }
+img[src$="/intern.png"] { content: '实习版主' !important; color: rgb(0,153,51) !important; }

@@ -1,0 +1,68 @@
+#!/bin/sh
+
+SH_COM=$(cd "${0%/*}";pwd)/$(basename $0)
+
+readlink $SH_COM >/dev/null 2>&1
+if [ $? -eq 0 ];then
+    R_SH_COM=$(readlink $SH_COM)
+    BASE_DIR=${R_SH_COM%/*}
+    cd $BASE_DIR
+else 
+    BASE_DIR=${SH_COM%/*}
+    cd $BASE_DIR
+fi
+
+PROG=$(basename $0)
+##################### setting here !###############
+#export GDK_USE_XFT=1
+#export OPERA_SYSTEM_UNAME=windows
+export LD_PRELOAD="/usr/lib/libtcmalloc.so"
+export OPERA_DIR=${OPERA_DIR:-"$BASE_DIR"/share/opera}
+export OPERA_PERSONALDIR=${OPERA_PERSONALDIR:-"$BASE_DIR"/profile}
+
+### bind /profile/icons to tmpfs
+# setting here!
+# V_list="icons vps cache"
+### 
+export V_LIST="icons"
+
+###################################################
+for path in $V_LIST;do
+    if [ -d /dev/shm ];then
+        # make icons bakup
+        if [ ! -d $BASE_DIR/profile.bak/$path.bak ];then
+            mkdir -p $BASE_DIR/profile.bak/$path.bak
+            if [ -d $BASE_DIR/profile/$path ];then
+                cp -r $BASE_DIR/profile/$path/* $BASE_DIR/profile.bak/$path.bak
+            fi
+        fi
+        #read -n1
+        # copy icons to tmpfs
+        if [ ! -d /dev/shm/op$path ];then
+            mkdir /dev/shm/op$path
+            cp -r $BASE_DIR/profile.bak/$path.bak/* /dev/shm/op$path/
+        else
+            rmdir /dev/shm/op$path 2>&- && cp -r $BASE_DIR/profile.bak/$path.bak/* /dev/shm/op$path/ || true; mkdir /dev/shm/op$path 2>&-
+        fi
+        #read -n1
+        # profile/icons tobe a link
+        if [ ! -L $BASE_DIR/profile/$path ];then
+            rm -rf $BASE_DIR/profile/$path
+            ln -s /dev/shm/op$path $BASE_DIR/profile/$path
+        fi
+    fi
+done
+### rsync tmpfs(icons) to icons_bak
+# you can add to cron.d by yourself
+sleep 60 && (for path in $V_LIST;do rsync -a /dev/shm/op$path/* $BASE_DIR/profile.bak/$path.bak;done) &
+
+ln -s "$BASE_DIR"/profile/dragonfly/ /tmp >/dev/null 2>&1
+
+"$BASE_DIR"/lib/$PROG/$PROG "$@" -nomail -nolirc -nomaillinks
+
+### back to floder by default
+for path in $V_LIST;do
+    rsync -a /dev/shm/op$path/* $BASE_DIR/profile.bak/$path.bak
+    rm $BASE_DIR/profile/$path
+    mkdir $BASE_DIR/profile/$path
+done

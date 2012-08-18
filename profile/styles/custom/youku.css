@@ -1,0 +1,22 @@
+div#brs,div#res,div#ires,div#center_col {
+	width: 100% !important;
+}
+
+div.s {
+	max-width: 100% !important;
+}
+
+#tads,#leftnav ,div#rhs {
+	display: none !important;
+}
+
+div#cnt {
+	margin-left: 0px !important;
+	margin: 0px 0px 0px 0px !important;
+}
+
+#center_col {
+	margin: 0 !important;
+}
+
+

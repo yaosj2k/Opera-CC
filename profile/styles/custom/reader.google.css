@@ -1,0 +1,3 @@
+div.entry-contents-inner>p>iframe {display:none !important;}
+body>a.logo  {display:none !important;}
+div.entry-contents-inner>p>a[href^="http://feedads.g.doubleclick.net/"] {display:none !important;}

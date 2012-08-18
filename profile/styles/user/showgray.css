@@ -1,0 +1,16 @@
+﻿@charset "utf-8";
+
+/* Name: 显示灰色背景
+High contrast (W/B)
+Copyright 2011 Opera Software */
+
+body  {background-color:#C9C9C9 !important;}
+div:not([class*="nav"]) {background-color: rgba(201, 201, 201, 0.6) ;}
+body>div   {background-color:transparent;}
+td    {background-color:#C9C9C9 !important;}
+table {background-color:#C9C9C9 !important;}
+/*p,div,h2,h3,h4,font {color: #0b3b8c ;}*/
+
+HTML:not([style]):not([class]):not([id]), BODY:not([style]):not([class]):not([id]):not([link]) {  background: none #A9A9A9 !important  }
+tr,dt,span,tbody,p,textarea,h2,h3,h4,li:not([class*="nav"]) {background: none !important;}
+td:not([class*="nav"]) {background: none;}

@@ -1,0 +1,16 @@
+@charset "utf-8";
+/*
+ * adblock
+ */
+ 
+[id^="ad"],
+[id*="_ad"],
+[id*="-ad"],
+[class^="ad"],
+[class*="_ad"],
+[class*="-ad"]
+{
+content:"";
+display:block;
+background:#494949;
+}
