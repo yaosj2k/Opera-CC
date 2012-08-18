@@ -1,0 +1,17 @@
+// ==UserScript==
+// @name useragent_mod
+// @lastmodified 2012-5-18
+// @include http*
+// ==/UserScript==
+
+
+(function(){
+	if(!window.opera)return;
+    function process()
+    {
+        window.navigator.userAgent="Mozilla/5.0 (compatible; X11; Linux x86_64; U; Android 4.0.3; en; MSIE 9.0; Windows NT 6.1; x64; Trident/5.0; Googlebot/2.1; bingbot/2.0) AppleWebKit/536.6 (KHTML, like Gecko) Mobile Chrome/20.0.1092.0 Safari/536.6 Gecko/20120403 Firefox/12.0 Opera 12.00"
+    }
+    
+    window.addEventListener("DOMContentLoaded",process,false);
+
+})();

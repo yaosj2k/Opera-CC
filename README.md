@@ -8,12 +8,16 @@ Opera AG
 > wget ftp://ftp.opera.com/pub/opera/linux/1164/opera-11.64-1403.x86_64.linux.tar.xz  
  tar xf opera-11.64-*.tar.xz -C $HOME/opt/  
  cd $HOME/opt  
- mv opera Opera-AG  
+ mv opera-11.64-1406.x86_64.linux opera  
+ cd opera  
+ rm ./opera  
 + git 初始化  
 >> cd $HOME/opt/  
- git clone https://github.com/atmouse-/Opera-AG.git  
+ git init  
+ git remote add origin https://github.com/atmouse-/Opera-AG.git  
+ git pull origin canch  
 + 测试  
->>> ./Opera-AG/bin/parse.sh  
+>>> ./bin/parse.sh  
 + 全部OK的话，说明命令都没有问题，可以直接双击opera运行  
 
 *****************************

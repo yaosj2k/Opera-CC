@@ -1,0 +1,17 @@
+// ==UserScript==
+// @name removeGoogleRedirector
+// @create 2012-4-20
+// @includehttps://encrypted.google.com/*
+// ==/UserScript==
+
+(function(){
+	if(!window.opera)return;
+    function process()
+    {
+        list=document.getElementsByClassName('l')
+        for (i=0;i<list.length;i++){list[i].onmousedown=null;list[i].removeAttribute('onmousedown');}
+    }
+    
+    window.addEventListener("DOMContentLoaded",process,false);
+
+})();
