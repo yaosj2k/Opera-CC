@@ -6,7 +6,7 @@ Opera AG
 ###安装方法如下：  
 + 下载并解压  
 > wget ftp://ftp.opera.com/pub/opera/linux/1164/opera-11.64-1403.x86_64.linux.tar.xz  
- tar xf opera-11.64-*.tar.xz -C $HOME/opt/ 
+ tar xf opera-11.64-*.tar.xz -C $HOME/opt/  
  cd $HOME/opt  
  mv opera Opera-AG  
 + git 初始化  
