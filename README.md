@@ -15,7 +15,7 @@ Opera AG
 >> cd $HOME/opt/  
  git init  
  git remote add origin https://github.com/atmouse-/Opera-AG.git  
- git pull origin canch  
+ git pull origin master  
 + 测试  
 >>> ./bin/parse.sh  
 + 全部OK的话，说明命令都没有问题，可以直接双击opera运行  
