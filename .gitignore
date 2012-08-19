@@ -1,0 +1,15 @@
+*~
+lib
+share
+LICENSE
+install
+opera-widget-manager
+profile/pstorage
+profile/sessions
+profile/notes.adr.pre_sync
+profile/notes.adr
+profile/wand.dat
+profile/cookies4.dat
+profile/typed_history.xml
+profile/global_history.dat
+
