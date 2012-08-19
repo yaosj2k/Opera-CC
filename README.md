@@ -15,7 +15,7 @@ Opera AG
 > cd opera  
 > rm ./opera  
 + git 初始化  
->> cd $HOME/opt/  
+>> cd $HOME/opt/opera  
 >> git init  
 >> git remote add origin https://github.com/atmouse-/Opera-AG.git  
 >> git pull origin master  
