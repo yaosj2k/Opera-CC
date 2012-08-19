@@ -8,7 +8,7 @@ Opera AG
 > wget ftp://ftp.opera.com/pub/opera/linux/1164/opera-11.64-1403.x86_64.linux.tar.xz  
  tar xf opera-11.64-*.tar.xz -C $HOME/opt/  
  cd $HOME/opt  
- mv opera-11.64-1406.x86_64.linux opera  
+ mv opera-11.64-1403.x86_64.linux opera  
  cd opera  
  rm ./opera  
 + git 初始化  
