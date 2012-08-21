@@ -58,7 +58,7 @@ sleep 60 && (for path in $V_LIST;do rsync -a /dev/shm/op$path/* $BASE_DIR/profil
 
 ln -s "$BASE_DIR"/profile/dragonfly/ /tmp >/dev/null 2>&1
 
-"$BASE_DIR"/lib/$PROG/$PROG "$@" -nomail -nolirc -nomaillinks
+"$BASE_DIR"/lib/$PROG/$PROG "$@"
 
 ### back to floder by default
 for path in $V_LIST;do
