@@ -13,11 +13,11 @@ else
   fi
 
 version="opera-11.64-1403.x86_64.linux"
-wget ftp://ftp.opera.com/pub/opera/linux/1164/opera-11.64-1403.x86_64.linux.tar.xz
+wget ftp://ftp.opera.com/pub/opera/linux/1164/${version}.tar.xz
 
 tar xf ${version}.tar.xz -C ./ --exclude=${version}/opera
 mv ${version}/* ./
 rmdir ${version}
 ./bin/parse.sh
 
-rm opera-11.64-1403.x86_64.linux.tar.xz
+rm ${version}.tar.xz
