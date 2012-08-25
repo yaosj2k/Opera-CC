@@ -2,8 +2,8 @@
 // @name insertDL
 // @description xunDL
 // @create 2012-4-10
-// @lastmodified 2012-4-10
-// @version 1.0.0.0
+// @lastmodified 2012-8-26
+// @version 1.0.0.1
 // @include http://dynamic.cloud.vip.xunlei.com/*
 // ==/UserScript==
 
@@ -31,7 +31,7 @@
                 var dl_button=document.createElement('a');
                 var a_text=document.createTextNode('▲build DL');
                 //dl_button.setAttribute('onclick',"javascript:var click_area=document.createElement('li');click_area.setAttribute('align','center');var click_button=document.createElement('a');var a_text=document.createTextNode('▲download');click_button.setAttribute('href','dl:'+'"+url+"'+','+window.location.href+','+document.cookie);click_button.appendChild(a_text);click_area.appendChild(click_button);document.querySelector('#main_nav').children[0].appendChild(click_area);");
-                dl_button.setAttribute('onclick',"javascript:document.getElementById('insert_url').href='dl:'+'"+url+"'+','+window.location.href+','+document.cookie");
+                dl_button.onclick="javascript:document.getElementById('insert_url').href='"+url+"'";
                 dl_button.appendChild(a_text);
                 dl_url[i].parentNode.appendChild(dl_button);
             }
@@ -67,7 +67,7 @@
             if(url){
                 var dl_button=document.createElement('a');
                 var a_text=document.createTextNode('▲build DL');
-                dl_button.setAttribute('onclick',"javascript:document.getElementById('insertbt_url').href='dl:'+'"+url+"'+','+window.location.href+','+document.cookie");
+                dl_button.onclick="javascript:document.getElementById('insert_url').href='"+url+"'";
                 dl_button.appendChild(a_text);
                 btdown_url[i].parentNode.insertBefore(dl_button,btdown_url[i]);
             }
