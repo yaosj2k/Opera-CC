@@ -49,7 +49,7 @@
 		fontColor: "#FFFFFF",				//前景颜色
 		borderColor: "#E3FE03",				//边框颜色
 		matchingColor: "#FF0000",			//激活编号序列颜色
-		fontName: "新宋体",					//字体名称
+		fontName: "Inconsolata",					//字体名称
 		//fontName: "Arial",					//字体名称
 		fontSize: "14",						//字体大小
 		opacity: "0.85"						//透明度
