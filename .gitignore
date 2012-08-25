@@ -12,4 +12,5 @@ profile/wand.dat
 profile/cookies4.dat
 profile/typed_history.xml
 profile/global_history.dat
+profile/*.pre_sync
 
