@@ -54,7 +54,8 @@ for path in $V_LIST;do
 done
 ### rsync tmpfs(icons) to icons_bak
 # you can add to cron.d by yourself
-sleep 60 && (for path in $V_LIST;do rsync -a /dev/shm/op$path/* $BASE_DIR/profile.bak/$path.bak;done) &
+# not need right now
+#sleep 60 && (for path in $V_LIST;do rsync -a /dev/shm/op$path/* $BASE_DIR/profile.bak/$path.bak;done) &
 
 ln -s "$BASE_DIR"/profile/dragonfly/ /tmp >/dev/null 2>&1
 
