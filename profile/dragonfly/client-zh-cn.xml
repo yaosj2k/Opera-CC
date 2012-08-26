@@ -170,4 +170,5 @@ window.load_screen_timeout = window.setTimeout(function()
 <link rel="stylesheet" href="./style/dragonfly.css"/>
 <script src="./script/dragonfly-zh-cn.js"/>
 <body/>
+<div id="contenteditable"/>
 </viewport>

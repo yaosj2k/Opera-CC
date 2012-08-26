@@ -572,6 +572,11 @@ cst-select-option-list,
   background-image: url('data:image/png;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAZpJREFUeNqsk7FLAnEUx72zLrwLh6Jo0qGG6GgSBCHbW8QaAhcnNY+mQHfd+gOktaWtUdoMXCJQWgIDh6AlaEmE6K447+z75Ak/jrsbqh98+PF73+893/u9n9J0Oo38dcmRf1gL4kGSJK9+BrbAAFyIgthBaCXj8bhfq9Ue8UE/zCeJGYVKVsAB2AbL4BMMwQ0YeSvxS7IDTsA3sIUfjAGF23oKa2dVlmUD+xeYiANIJpNmoVAYQj8lX+B0VFXNua47EbRFoCUSCanVat212+116C75AqcDPcUtUFzOZrOjSqXyEo/H3/P5/L7jOCpVyL5L3yS2bZPpg66HqqhWq91yubyXTqfvkeAQMZOSsy+wHQdbdF5JqVTabTabg16vl+M7Ii3KPv8kuq6/8gRmSSzLStXr9SPTNHX2Ulxhn38SwzBuFUWJsTk6vyreZxWSTr7AJMVi8aHRaHRhVHkyMt/PbFIUJ518Ee9/YA6f1zqdznEmkznXNO0KoWva6Uxx0r3f+T57xKiSTbABlvj1voFneMzQZ//b9SPAAK3Wr4hHp5SeAAAAAElFTkSuQmCC');
 }
 
+.network_logger\.view-raw::before
+{
+  background-image: url('data:image/png;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJxJREFUeNpi/P//PwOlgImBCoAqhrCgCzAyMm4lRiMwGLzherCEiQ8evVuwCaIbwgR0yWZibMfpHaAB/4AKp5MaJiguARoCotYBMTeS7e4kByxQ00wgxUqpS0BhwoXFcGeiDUELaHc0VxEVOyCDDuCJHQdcEviwDwF5MMbmkq3Epg98sUNZOsGSj/DlHey5GKpJG4iZ8RmADgACDAA/XnoWgnM2ngAAAABJRU5ErkJggg==');
+}
+
 .profiler-start-stop::before
 {
   background-image: url('data:image/png;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAARNJREFUeNpi/P//PwOlgImBCmDwGMKCTTCZkZEZaHoKKwNDIDMDg/ZfBoarvxkY1v9jYJgz9///v+jqGdEDNgloABsDwyoxBgZLPiAfaAgDSNcnIH7FwHD8FwND2Dw0gzC8w8rElCsJNEAYyOYEYnYoDeKDxEHyBMOEi4Ullh/qT0aYc6F8fqg8wTBh/fNHFGTyfyhGtxEkT9AlzFxcH4AByIALg+QJGiKsqXn0B5JLkPEPqDxBQyLnzJn2TUzs3jeozf+hNIj/TVT0AUieYBSDXPzz61fLecHBYS9Onzb/9e6dLJuQ0GMJU9OTSWvXrmbn5j4GjXW8hsAiRAmIpaCR8hGInwHxPSzhjdOQIZoBAQIMAFN0YIJwMXBqAAAAAElFTkSuQmCC');
@@ -1975,6 +1980,12 @@ info {
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+#contenteditable
+{
+  position: absolute;
+  left: -100px;
 }
 
 /* dfbuild: concatenated from: ./ui-style/overlay.css */
@@ -4205,7 +4216,7 @@ d
 }
 
 #js-source-scroll-container {
-  /* the correct width is set dynamically 
+  /* the correct width is set dynamically
      to scroll bar width in JsSourceView */
   width: 50px;
 }
@@ -4253,7 +4264,7 @@ d
   color: #5c0909 !important;
 }
 
-/* line number */ 
+/* line number */
 .js-source-line-numbers
 {
   position: absolute;
@@ -4290,7 +4301,7 @@ d
   padding: 0;
   padding-right: 3px;
   background-color: transparent;
-  height: 100%; /* should be the same as the line height .js-source-content li */ 
+  height: 100%; /* should be the same as the line height .js-source-content li */
   font-size: inherit;
   font-family: inherit;
   vertical-align: middle;
@@ -4327,7 +4338,7 @@ d
 .js-identifier-selected,
 .js-identifier-selected-first,
 .js-identifier-selected-between,
-.js-identifier-selected-last 
+.js-identifier-selected-last
 {
   color: #000000;
   background-color: #c5daf1;
@@ -8226,7 +8237,12 @@ input[type='datetime-local']
   overflow: auto;
   background-color: #f2f2f2;
   color: #000;
-  
+  padding: 3px 7px;
+}
+
+.support-context
+{
+  padding: 8px;
 }
 
 .tooltip-selected
