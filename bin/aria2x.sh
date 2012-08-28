@@ -23,6 +23,7 @@ DIRNAME="$(dirname $DIRFILE)"
 FILENAME="$(basename $DIRFILE)"
 
 echo "save to ${DIRFILE}"
+notify-send $1
 aria2c --allow-overwrite=true \
     --user-agent="$UA" \
     --load-cookies="$COOKIES" \

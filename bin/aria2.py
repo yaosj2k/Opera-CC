@@ -8,7 +8,7 @@ import os
 #http:// referrer
 
 print("download",sys.argv[1],sys.argv[2])
-os.system("notify-send '"+sys.argv[1]+"'")
+#os.system("notify-send '"+sys.argv[1]+"'")
 os.system("python2 ./bin/cookies.py ./profile/cookies4.dat /tmp/cookies.txt")
 
 if "http://" in sys.argv[1] :
