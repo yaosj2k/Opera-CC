@@ -18,6 +18,7 @@ s/[_%]7C/\|/g;s/[_%]7D/\}/g;s/[_%]7E/\~/g;s/[_%]2B/\+/g')"
 
 UA="Opera/9.80 (X11; Linux x86_64; U; en) Presto/2.10.229 Version/11.64"
 DIRFILE=$(zenity --file-selection --save --filename="$FILE" --confirm-overwrite)
+[[ -z $DIRFILE ]] && exit
 DIRNAME="$(dirname $DIRFILE)"
 FILENAME="$(basename $DIRFILE)"
 

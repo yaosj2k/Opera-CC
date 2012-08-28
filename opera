@@ -13,6 +13,11 @@ else
 fi
 
 PROG=$(basename $0)
+
+## warming while dir is change
+[[ ! -f $BASE_DIR/OPERA_PATH ]] && echo "$BASE_DIR" > $BASE_DIR/profile/OPERA_PATH
+[[ $(cat $BASE_DIR/profile/OPERA_PATH) != "$BASE_DIR" ]] && notify-send "You have change you opera dir,the Extensions function maybe invalid"
+
 ##################### setting here !###############
 #export GDK_USE_XFT=1
 #export OPERA_SYSTEM_UNAME=windows
@@ -27,8 +32,8 @@ export OPERA_PERSONALDIR=${OPERA_PERSONALDIR:-"$BASE_DIR"/profile}
 export V_LIST="icons"
 
 ###################################################
-for path in $V_LIST;do
-    if [ -d /dev/shm ];then
+if [ -d /dev/shm ];then
+    for path in $V_LIST;do
         # make icons bakup
         if [ ! -d $BASE_DIR/profile.bak/$path.bak ];then
             mkdir -p $BASE_DIR/profile.bak/$path.bak
@@ -50,12 +55,15 @@ for path in $V_LIST;do
             rm -rf $BASE_DIR/profile/$path
             ln -s /dev/shm/op$path $BASE_DIR/profile/$path
         fi
-    fi
-done
+    done
+else
+    [[ -f $BASE_DIR/profile/operaprefs.ini ]] && sed -i "/Cache\ Directory4=.*$/"d $BASE_DIR/profile/operaprefs.ini
+fi
 ### rsync tmpfs(icons) to icons_bak
 # you can add to cron.d by yourself
 # not need right now
 #sleep 60 && (for path in $V_LIST;do rsync -a /dev/shm/op$path/* $BASE_DIR/profile.bak/$path.bak;done) &
+
 
 ln -s "$BASE_DIR"/profile/dragonfly/ /tmp >/dev/null 2>&1
 
