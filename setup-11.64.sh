@@ -18,6 +18,8 @@ wget ftp://ftp.opera.com/pub/opera/linux/1164/${version}.tar.xz
 tar xf ${version}.tar.xz -C ./ --exclude=${version}/opera
 mv ${version}/* ./
 rmdir ${version}
+
+chmod -R 755 *
 ./bin/parse.sh
 
 rm ${version}.tar.xz
