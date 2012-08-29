@@ -29,7 +29,7 @@ export OPERA_PERSONALDIR=${OPERA_PERSONALDIR:-"$BASE_DIR"/profile}
 # setting here!
 # V_list="icons vps cache"
 ### 
-export V_LIST="icons"
+export V_LIST=""
 
 ###################################################
 if [ -d /dev/shm ];then
