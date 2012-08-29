@@ -22,7 +22,7 @@ PROG=$(basename $0)
 #export GDK_USE_XFT=1
 #export OPERA_SYSTEM_UNAME=windows
 #export LD_PRELOAD="/usr/lib/libtcmalloc.so"
-export OPERA_DIR=${OPERA_DIR:-"$BASE_DIR"/share/opera}
+export OPERA_DIR=${OPERA_DIR:-"$BASE_DIR"/share/$PROG}
 export OPERA_PERSONALDIR=${OPERA_PERSONALDIR:-"$BASE_DIR"/profile}
 
 ### bind /profile/icons to tmpfs
