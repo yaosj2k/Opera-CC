@@ -11,6 +11,7 @@ else
     BASE_DIR=${SH_COM%/*}
 fi
 
+mkdir -p $BASE_DIR/../profile/dragonfly/
 cd $BASE_DIR/../profile/dragonfly/
 wget --no-check-certificate -N "https://dragonfly.opera.com/app/stp-1/experimental/zips/latest/client-$OP_LANG.zip"
 if [[ -f client-$OP_LANG.zip ]];then
