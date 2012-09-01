@@ -1,0 +1,11 @@
+banners?[^/]{0,12}\.js(\?|$)
+[/_.-]ads?[_-][^/]{1,12}\.js
+[/_.-]ad[sv]?([01234]?|img|pic)[./?]
+[/_-]ads?[_-]?(click|frame|link|content|image|box|flash)
+[/_-]ads?[_-](banner|count|layer|footer|html|onbit|server|sinject|show|js\.)
+[/_-]ad(file|code)
+[^/][/_-](show|frame)Ad[^a-rt-z]
+/g(uang)?g(ao)?(img|pic)?[./]
+[^0-9][1-9][0-9][580]x([5-9]|[1-9][0-9])[580][_.a-z-][^/]{0,12}(swf|gif|jpg)$
+#[^0-9][1-9][0-9][580]-[1-9][0-9]?[580][_.a-wyz][^/-]{0,12}\.(swf|gif|jpg)$
+#^http://img\.cnbeta\.com/[^/]{1,20}\.(gif|jpg)$
