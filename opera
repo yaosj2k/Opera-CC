@@ -67,6 +67,13 @@ fi
 
 ln -s "$BASE_DIR"/profile/dragonfly/ /tmp >/dev/null 2>&1
 
+## squid
+SQUID_PID=$(pidof squid)
+"$BASE_DIR"/bin/squid/squid -f "$BASE_DIR"/bin/squid/squid.conf -z
+if [[ -z $SQUID_PID ]];then
+    "$BASE_DIR"/bin/squid/squid -f "$BASE_DIR"/bin/squid/squid.conf
+fi
+
 "$BASE_DIR"/lib/$PROG/$PROG "$@"
 
 ### back to floder by default
