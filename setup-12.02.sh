@@ -10,15 +10,33 @@ if [ $? -eq 0 ];then
 else 
     BASE_DIR=${SH_COM%/*}
     cd $BASE_DIR
-  fi
+fi
 
-version="opera-12.02-1565.x86_64.linux"
-wget http://snapshot.opera.com/unix/RC1_12.02-1565/${version}.tar.xz
-#wget ftp://ftp.opera.com/pub/opera/linux/1164/${version}.tar.xz
+SYS_BIT=$(getconf LONG_BIT)
+
+if [[ $SYS_BIT == '64' ]] ;then
+    version="opera-12.02-1578.x86_64.linux"
+    squid_link="https://dl.dropbox.com/sh/m2hz4s4hvd2g28x/NhKeU9kS8D/squid-x86_64.tar.gz"
+    platform="x86_64"
+else
+    version="opera-12.02-1578.i386.linux"
+    squid_link="https://dl.dropbox.com/sh/m2hz4s4hvd2g28x/nUPMR9xe9f/squid-i386.tar.gz"
+    platform="i386"
+fi
+wget http://get.opera.com/pub/opera/linux/1202/${version}.tar.xz
 
 tar xf ${version}.tar.xz -C ./ --exclude=${version}/opera
 mv ${version}/* ./
 rmdir ${version}
+
+### squid
+wget ${squid_link}
+tar -xzvf squid-${platform}.tar.gz -C ./bin/squid/
+rm -rf squid-${platform}.tar.gz
+
+./bin/update-drf.sh
+
+chmod -R 755 *
 ./bin/parse.sh
 
 rm ${version}.tar.xz
