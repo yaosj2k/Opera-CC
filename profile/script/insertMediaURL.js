@@ -15,10 +15,16 @@
         for (i=0;i<list.length;i++)
         {
             var url=list[i].getAttribute("src");
-            if (/player\.youku\.com/.test(url))
-            {
+            if (/player\.youku\.com/.test(url)){
                 var f_url="http://v.youku.com/v_show/id_"+url.match(/\w{13}/)+".html";
-            }else{continue;}
+            }
+            else if (/www\.tudou\.com/.test(url)){
+                var f_url="http://www.tudou.com/programs/view/"+url.split('\/')[4]+'/'+url.split('\/')[5];
+            }
+            else{
+                continue;
+            }
+            
             var click_area=document.createElement('p');
             click_area.setAttribute('align','center');
             
