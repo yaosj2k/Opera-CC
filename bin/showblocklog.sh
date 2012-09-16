@@ -2,7 +2,7 @@
 
 set timeout 30
 set USER proxy
-set PASSWD ws1qa
+set PASSWD proxy
 
 spawn su $USER
 expect "Password: "

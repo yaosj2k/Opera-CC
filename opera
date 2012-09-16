@@ -29,11 +29,12 @@ export OPERA_PERSONALDIR=${OPERA_PERSONALDIR:-"$BASE_DIR"/profile}
 # setting here!
 # V_list="icons vps cache"
 ### 
-export V_LIST="icons"
+export v_list="icons"
+other_argv="-nomail -noargb -nolirc -nomaillinks" 
 
 ###################################################
 if [ -d /dev/shm ];then
-    for path in $V_LIST;do
+    for path in $v_list;do
         # make icons bakup
         if [ ! -d $BASE_DIR/profile.bak/$path.bak ];then
             mkdir -p $BASE_DIR/profile.bak/$path.bak
@@ -62,22 +63,22 @@ fi
 ### rsync tmpfs(icons) to icons_bak
 # you can add to cron.d by yourself
 # not need right now
-#sleep 60 && (for path in $V_LIST;do rsync -a /dev/shm/op$path/* $BASE_DIR/profile.bak/$path.bak;done) &
+#sleep 60 && (for path in $v_list;do rsync -a /dev/shm/op$path/* $BASE_DIR/profile.bak/$path.bak;done) &
 
 
 ln -s "$BASE_DIR"/profile/dragonfly/ /tmp >/dev/null 2>&1
 
 ## squid
 SQUID_PID=$(pidof squid)
-"$BASE_DIR"/bin/squid/squid -f "$BASE_DIR"/bin/squid/squid.conf -z
 if [[ -z $SQUID_PID ]];then
+    "$BASE_DIR"/bin/squid/squid -f "$BASE_DIR"/bin/squid/squid.conf -z
     "$BASE_DIR"/bin/squid/squid -f "$BASE_DIR"/bin/squid/squid.conf
 fi
 
-"$BASE_DIR"/lib/$PROG/$PROG "$@"
+"$BASE_DIR"/lib/$PROG/$PROG "$@" $other_argv &>/tmp/opera/stdout.txt
 
 ### back to floder by default
-for path in $V_LIST;do
+for path in $v_list;do
     rsync -a /dev/shm/op$path/* $BASE_DIR/profile.bak/$path.bak
     rm $BASE_DIR/profile/$path
     mkdir $BASE_DIR/profile/$path
