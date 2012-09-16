@@ -75,6 +75,7 @@ if [[ -z $SQUID_PID ]];then
     "$BASE_DIR"/bin/squid/squid -f "$BASE_DIR"/bin/squid/squid.conf
 fi
 
+mkdir -p /tmp/opera/
 "$BASE_DIR"/lib/$PROG/$PROG "$@" $other_argv &>/tmp/opera/stdout.txt
 
 ### back to floder by default
