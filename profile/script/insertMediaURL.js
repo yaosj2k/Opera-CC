@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name insertVideoURL
 // @description 插入视频源地址
-// @lastmodified 2012-3-29
+// @lastmodified 2012-9-17
 // @include http*
 // ==/UserScript==
 
 
 (function(){
-	if(!window.opera)return;
+    if(!window.opera)return;
     function process()
     {
         var list=window.document.getElementsByTagName("embed");
@@ -20,6 +20,9 @@
             }
             else if (/www\.tudou\.com/.test(url)){
                 var f_url="http://www.tudou.com/programs/view/"+url.split('\/')[4]+'/'+url.split('\/')[5];
+            }
+            else if (/video\.sina\.com\.cn/.test(url)){
+            var f_url="http://you.video.sina.com.cn/b/"+url.match(/\d{8}(_|-)\d{10}/g)[0]+".html"
             }
             else{
                 continue;
