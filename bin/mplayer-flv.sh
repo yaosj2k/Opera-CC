@@ -24,11 +24,11 @@ python2 ./bin/cookies.py ./profile/cookies4.dat /tmp/cookies_byopera.txt
 notify-send "$media_url"
 case "$1" in
   *tudou*)
-  wget --referer="$referrer" --load-cookies /tmp/cookies_byopera.txt -O - $media_url | mplayer -force-window-position -really-quiet -cache 1024 -
+  wget --referer="$referrer" --load-cookies /tmp/cookies_byopera.txt -O - "$media_url" | mplayer -force-window-position -really-quiet -cache 1024 -
   ;;
 
   *)
-  echo "$media_url" | mplayer -referrer $referrer -slave -force-window-position -cache 1024 -really-quiet -cookies-file "/tmp/cookies_byopera.txt" -playlist -
+  echo "$media_url" | mplayer -slave -force-window-position -cache 1024 -really-quiet -cookies-file "/tmp/cookies_byopera.txt" -playlist -
   ;;
 esac
 

@@ -22,7 +22,10 @@
                 var f_url="http://www.tudou.com/programs/view/"+url.split('\/')[4]+'/'+url.split('\/')[5];
             }
             else if (/video\.sina\.com\.cn/.test(url)){
-            var f_url="http://you.video.sina.com.cn/b/"+url.match(/\d{8}(_|-)\d{10}/g)[0]+".html"
+            var f_url="http://you.video.sina.com.cn/b/"+url.match(/\d{8}(_|-)\d{10}/g)[0]+".html";
+            }
+            else if (/player\.56\.com/.test(url)){
+            var f_url="http://www.56.com/u/v_"+url.match(/\w{11}(?=.swf)/)[0]+".html";
             }
             else{
                 continue;
