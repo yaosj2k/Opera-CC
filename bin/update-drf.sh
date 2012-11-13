@@ -11,7 +11,8 @@ else
     BASE_DIR=${SH_COM%/*}
 fi
 
-rtime=$(date --date="$(curl -I 'https://dragonfly.opera.com/app/stp-1/zips/latest/client-${OP_LAND}.zip' | awk -F' ' '/Last-Modified/{print($3,$4,$5,$6,$7)}')" +%s)
+time_header=$(curl -I "https://dragonfly.opera.com/app/stp-1/zips/latest/client-${OP_LANG}.zip" | awk -F' ' '/Last-Modified/{print($3,$4,$5,$6,$7)}')
+rtime=$(date --date="$time_header" +%s)
 
 mkdir -p $BASE_DIR/../profile/dragonfly/
 cd $BASE_DIR/../profile/dragonfly/
