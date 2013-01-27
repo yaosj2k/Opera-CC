@@ -30,7 +30,7 @@ export OPERA_PERSONALDIR=${OPERA_PERSONALDIR:-"$BASE_DIR"/profile}
 # V_list="icons vps cache"
 ### 
 export v_list="icons"
-other_argv="-nomail -noargb -nolirc -nomaillinks" 
+other_argv="-noargb -nolirc" #-nomail" 
 
 ###################################################
 if [ -d /dev/shm ];then
@@ -69,14 +69,15 @@ fi
 ln -s "$BASE_DIR"/profile/dragonfly/ /tmp >/dev/null 2>&1
 
 ## squid
-SQUID_PID=$(pidof squid)
-if [[ -z $SQUID_PID ]];then
-    "$BASE_DIR"/bin/squid/squid -f "$BASE_DIR"/bin/squid/squid.conf -z
-    "$BASE_DIR"/bin/squid/squid -f "$BASE_DIR"/bin/squid/squid.conf
-fi
+#SQUID_PID=$(pidof squid)
+#if [[ -z $SQUID_PID ]];then
+#    "$BASE_DIR"/bin/squid/squid -f "$BASE_DIR"/bin/squid/squid.conf -z
+#    "$BASE_DIR"/bin/squid/squid -f "$BASE_DIR"/bin/squid/squid.conf
+#fi
 
 mkdir -p /tmp/opera/
-"$BASE_DIR"/lib/$PROG/$PROG "$@" $other_argv &>/tmp/opera/stdout.txt
+echo "stdout to /tmp/opera/stdout.txt"
+nice -n 0 "$BASE_DIR"/lib/$PROG/$PROG "$@" $other_argv &>/tmp/opera/stdout.txt
 
 ### back to floder by default
 for path in $v_list;do

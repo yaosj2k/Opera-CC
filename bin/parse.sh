@@ -4,7 +4,7 @@
 a=" OK "
 b=" FAIL "
 COLUMNS=40
-exes="zenity unzip exo-open aria2c mplayer grep sed python2 python wget expect notify-send xterm readlink rsync"
+exes="curl zenity unzip exo-open aria2c mplayer grep sed python2 python wget expect notify-send xterm readlink rsync"
 #=======================================
 which which >/dev/null 2>&1
 if [[ $? != 0 ]];then
